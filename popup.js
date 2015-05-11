@@ -11,6 +11,11 @@ chrome.tabs.onUpdated.addListener(checkForValidUrl);
 chrome.tabs.onHighlighted.addListener(checkForValidUrl);
 
 
+chrome.identity.getAuthToken({ 'interactive': true }, function(token) {
+  console.log(token);
+});
+
+
 
 
 
